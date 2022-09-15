@@ -1,0 +1,20 @@
+<h1>{{title}}</h1>
+<!-- <h1>Myths and Legends of Ancient Greece and Rome</h1> -->
+<!-- <app-heroes></app-heroes> -->
+<nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    &nbsp;
+    <a routerLink="/heroes">Gods</a>
+    &nbsp;
+    <a routerLink="/jump">Jump</a>
+</nav>
+
+<h2>Top Gods</h2>
+<div class="heroes-menu">
+  <a *ngFor="let hero of heroes"
+    routerLink="/detail/{{hero.id}}">
+    {{hero.name}}
+  </a>
+</div>
+
+<app-hero-search></app-hero-search>
